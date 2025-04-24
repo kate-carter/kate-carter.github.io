@@ -1,5 +1,5 @@
 # TubeViT on the CWRU HPC (Pioneer Cluster)
-I have found that 90% of doing research that involves computing is setting things up and troubleshooting and 10% is running the actual job.  This is an unofficial guide to how I run models on the HPC Pioneer cluster as a member of the Distributed Little Red Hen Lab (mbt8 group). \
+I have found that 90% of doing research that involves computing is setting things up and troubleshooting and 10% is running the actual job.  This is an unofficial guide to how I run models on the HPC Pioneer cluster as a member of the Distributed Little Red Hen Lab (mbt8 group) **using MacOS command line.**\
 Updated 4/24/2025
 
 ### Setup
@@ -14,7 +14,7 @@ upload and configure your keys through the terminal with the instructions from y
 
 log into forticlient and the hpc (abc124, SSO password), respond to duo push. If you're logging in from CaseWireless you can skip this step as you do not need the VPN.
 
-create a gallina home (for Red Hen Users only) this is where you store large things (not your home directory). The exception to this is the model itself, more on that later. \
+create a gallina home directory (for Red Hen Users only) this is where you store large files (not your home directory). The exception to this is the model itself, more on that later. \
 ``` cd /path/to/gallina ``` \
 ``` mkdir abc124 ``` 
 
@@ -33,7 +33,7 @@ create a virtual environment to run the model in \
 ``` python -m venv tubevit_venv ``` \
 ``` source tubevit_venv/bin/activate ``` \
 ``` pip install -U pip wheel ``` \
-``` pip insteall -r requirements.txt ``` \
+``` pip insteall -r requirements.txt ``` 
 
 convert ViT weights to TubeViT \
 ``` python /home/abc124/TubeViT/scripts/convert_vit_weight.py ```
@@ -58,7 +58,7 @@ Jobs are run on compute nodes, which you get to from your home directory by requ
 ```tmux a ``` reconnects you to the current session if you've detached. 
 
 
-### Running a Training Cycle with UCF-101 \
+### Running a Training Cycle with UCF-101 
 (different steps are required to train tubevit on anything else as the model is currently configured for UCF-101. \ 
 use ``` train --help ``` to figure out what you have to do to train on other datasets
 
@@ -92,5 +92,5 @@ activate virtual environment \
 ``` source tubevit_venv/bin/activate ```
 
 train TubeViT on UCF-101 \
-``` python /home/kxc750/TubeViT/scripts/train.py -r /path/to/dataset -a path/to/annotations``` 
+``` python /home/abc124/TubeViT/scripts/train.py -r /path/to/dataset -a path/to/annotations``` 
 
