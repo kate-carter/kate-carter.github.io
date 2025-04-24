@@ -1,10 +1,10 @@
 # TubeViT on the CWRU HPC (Pioneer Cluster)
-I have found that 90% of doing research that involves computing is setting things up and troubleshooting and 10% is running the actual job.  This is an onofficial guide to how I run models on the HPC Pioneer cluster. abc124 is not anyone's actual ID number (as of 4/2025) \
+I have found that 90% of doing research that involves computing is setting things up and troubleshooting and 10% is running the actual job.  This is an unofficial guide to how I run models on the HPC Pioneer cluster as a member of the Distributed Little Red Hen Lab (mbt8 group). \
 Updated 4/24/2025
 
 ### Setup
 
-get a caseID (abc124) 
+get a caseID (eg abc124) 
 
 get forticlient (the CWRU VPN) through the u[tech] site 
 
