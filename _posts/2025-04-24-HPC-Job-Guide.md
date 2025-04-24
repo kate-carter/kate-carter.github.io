@@ -4,44 +4,44 @@ Updated 4/24/2025
 
 ### Setup
 
-get a caseID (eg abc124) 
+Get a caseID (eg abc124) 
 
-get forticlient (the CWRU VPN) through the u[tech] site 
+Get forticlient (the CWRU VPN) through the u[tech] site 
 
-get an hpc account on pioneer and obtain keys 
+Get an hpc account on pioneer and obtain keys 
 
-upload and configure your keys through the terminal with the instructions from your PI 
+Upload and configure your keys through the terminal with the instructions from your PI 
 
-log into forticlient and the hpc (abc124, SSO password), respond to duo push. If you're logging in from CaseWireless you can skip this step as you do not need the VPN.
+Log into forticlient and the hpc (abc124, SSO password), respond to duo push. If you're logging in from CaseWireless you can skip this step as you do not need the VPN.
 
-create a gallina home directory (for Red Hen Users only) this is where you store large files (not your home directory). The exception to this is the model itself, more on that later. \
+Create a gallina home directory (for Red Hen Users only) this is where you store large files (not your home directory). The exception to this is the model itself, more on that later. \
 ``` cd /path/to/gallina ``` \
 ``` mkdir abc124 ``` 
 
-upload your model to your HOME directory ``` home/abc124 ``` 
+Upload your model to your HOME directory ``` home/abc124 ``` 
 and your dataset to wherever using globus.personal 
 
-create a scratch directory. do not store things here, it will get deleted within 24h \
+Create a scratch directory. do not store things here, it will get deleted within 24h \
 ``` cd /scratch/users ``` \
 ``` mkdir abc124 ``` 
 
-go back to your home directory \
+Go back to your home directory \
 ``` cd /home/abc124 ``` 
 
-create a virtual environment to run the model in \
+Create a virtual environment to run the model in \
 ``` module load Python/3.11.5 ``` \
 ``` python -m venv tubevit_venv ``` \
 ``` source tubevit_venv/bin/activate ``` \
 ``` pip install -U pip wheel ``` \
 ``` pip insteall -r requirements.txt ``` 
 
-convert ViT weights to TubeViT \
+Convert ViT weights to TubeViT \
 ``` python /home/abc124/TubeViT/scripts/convert_vit_weight.py ```
 
-exit compute node \
+Exit compute node \
 ```exit```
 
-log out/close connection to the hpc \
+Log out/close connection to the hpc \
 ```logout```
 
 **Notes:**
@@ -64,33 +64,33 @@ use ``` train --help ``` to figure out what you have to do to train on other dat
 
 Log into forticlient (abc124, SSO password)
 
-load tmux \
+Load tmux \
 ``` tmux ```
 
 Log into the hpc (abc124, SSO password)\
 ``` ssh abc124@pioneer.case.edu ```
 
-go to gallina home to retrieve dataset \
+Go to gallina home to retrieve dataset \
 ``` cd /mnt/rds/redhen/gallina/home/abc124 ```
 
-move dataset (UCF-101) from gallina to scratch (or Jester or EpicKitchens) \
+Move dataset (UCF-101) from gallina to scratch (or Jester or EpicKitchens) \
 ``` mv UCF-101 /scratch/users/abc124 ```
 
-check that dataset moved \
+Check that dataset moved \
 ``` cd /scratch/users/abc124 ```
 
-go to home \
+Go to home \
 ``` cd /home/abc124 ```
 
-request compute \
+Request compute \
 ``` srun —mem=150gb --pty /bin/bash ```
 
-load compatible python module \
+Load compatible python module \
 ``` module load Python/3.11.5-GCCcore-13.2.0 libffi/3.4.4-GCCcore-13.2.0 ```
 
-activate virtual environment \
+Activate virtual environment \
 ``` source tubevit_venv/bin/activate ```
 
-train TubeViT on UCF-101 \
+Train TubeViT on UCF-101 \
 ``` python /home/abc124/TubeViT/scripts/train.py -r /path/to/dataset -a path/to/annotations``` 
 
