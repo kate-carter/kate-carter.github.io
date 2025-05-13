@@ -22,7 +22,7 @@ The model can't do livestreams, has compute limits, no internet-called API's or 
 My final question for the  model was **"Can I upload more than one video and have you output classification labels per video?"** \
 It responded that it could process each video individually, return a table or list with video filename, co-speech gesture type, sub-labels like proximal/distal, and timestamp in the clip that the gesture occurs.  This timestamping feature may be incredibly useful in pre-processing datasets for analysis by other machine vision systems like ViViT and TubeViT, which require one gesture per clip.  While the model has not indicated that it could pick out multiple gestures in one clip, it is able to take one video, isolate the timestamps of the gestures, and return clips with one gesture per clip.  It would then only be one additional step to prompt it to perform that chunking and then classify the videos.
 The example output that it gave was: \
-**Video**  **Gesture Type**  **Subtype**  **Time(s)** \
-video1.mp4  Pointing           Distal      1.5-2.2 \
-video2.mp4  Showing             --         1.0-3.7 \
-video3.mp4  Pointing          Proximal     2.0-2.8 \
+**Video** | **Gesture Type** | **Subtype** | **Time(s)** \
+video1.mp4 | Pointing       |    Distal     | 1.5-2.2 \
+video2.mp4 | Showing        |    --      |   1.0-3.7 \
+video3.mp4 | Pointing       |   Proximal   |  2.0-2.8 
