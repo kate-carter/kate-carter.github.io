@@ -74,11 +74,10 @@ very good at telling *what* an iconic gesture is, if it successfully recognizes 
 "Can you classify the co-speech gesture in this video?" \
 "Using linguistic terminology, can you classify the co-speech gesture in this video?" \
 "Using linguistic terminology, can you describe the actor's movement and then classify the co-speech gesture in this video?" \
-(final) "Using linguistic terminology, can you classify the co-speech gesture in this clip in two sections: 1) the action being performed, and 2) the co-speech gesture category the gesture belongs to?"
-3) **Put together my API script.** Gemini speaks python, so if you know how to write Python, you're in luck. If not, Gemini can probably also help you write one.  I used Cursor, which is an AI-assisted code. \
-   editor to make this script, writing the bare minimum and then asking it to fill in functionality like formatting the data into a .docx and adding some extra data captures to it like processing time. \
+(final) **"Using linguistic terminology, can you classify the co-speech gesture in this clip in two sections: 1) the action being performed, and 2) the co-speech gesture category the gesture belongs to?"** \
+3) **Put together my API script.** Gemini speaks python, so if you know how to write Python, you're in luck. If not, Gemini can probably also help you write one.  I used Cursor, which is an AI-assisted code. editor to make this script, writing the bare minimum and then asking it to fill in functionality like formatting the data into a .docx and adding some extra data captures to it like processing time. \
 5) **De-bugged the script** so that it worked. Cursor is great at writing scripts, but terrible at keeping track of what packages are running in the environment, what dependencies
-   those packages have, etc.  I wrote a ```requirements.txt``` document and a ReadMe so that I (and anyone replicating my code) could have an easier time setting it up.
+   those packages have, etc.  I wrote a ```requirements.txt``` document and a ReadMe so that I (and anyone replicating my code) could have an easier time setting it up. \
 6) **Uploaded my work to GitHub** including a ReadMe, requirements.txt, and a .gitignore if necessary. Cursor can help you write these if you don't know how... But
 I had to check that it actually included everything. Cursor is still an AI agent and while it is very useful, it does hallucinate, lack memory of its past actions and edits, and leave things out occasionally.
 
