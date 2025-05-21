@@ -38,4 +38,4 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Blog Posts
+      tags: Blog-Posts
