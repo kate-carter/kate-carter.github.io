@@ -23,7 +23,7 @@ It took around 5 hours and yielded useful but tedious and unpredictable results.
 of the gesture.  I say valid and not correct as some of the output was different than my own annotations, but still valid under Bressen's conventions.
 
 Beautiful data, but it took a long time to get and standardize.  Due to this, I went and wrote an API script in Python to do it for me. The code to that set of API scripts
-set up to analyze co-speech gesture are here: https://github.com/kate-carter/Gemini_API_Co-Speech and can be applied to other .mp4 videos containing one actor and one gesture.
+set up to analyze co-speech gesture are [here:](https://github.com/kate-carter/Gemini_API_Co-Speech) and can be applied to other .mp4 videos containing one actor and one gesture.
 Testing on multi-gesture videos will come in a later post.
 
 ### API-Automated Testing (Gemini 2.0-001 Multimodal)
@@ -61,7 +61,7 @@ visualizations can be created to assess the model's performance at various level
 very good at telling *what* an iconic gesture is, if it successfully recognizes that an iconic gesture is happening.
 
 ## Steps to use my API Script to analyze co-speech gesture.
-1) Go to my GitHub for the project, https://github.com/kate-carter/Gemini_API_Co-Speech \
+1) Go to my [GitHub for the project](https://github.com/kate-carter/Gemini_API_Co-Speech) \
 2) Fork the whole thing to your own repository/download so you can adapt it to your own OS (Mine was tested and run through MacOS Command line) \
 3) Make Gemini API Keys \
 4) Read the ReadMe file and follow its instructions. This will mostly involve changing out "/file/path/to/video" and "/file/path/to/output" to the actual filepaths you want Gemini to pull videos from and write output.  You also have to set your API Key as an environment variable.  I highly recommend setting up a virtual environment ```.venv```
