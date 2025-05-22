@@ -10,7 +10,7 @@ Original video: ```11-11.mp4``` \
 Cropped video: ```11-11-1_shrug.mp4``` 
 
 ### Manual Testing (Gemini 2.0 Flash)
-**Methods**
+**Methods** \
 To test Gemini’s capacity for labeling co-speech gesture on a small scale and refine my prompt before doing testing at scale, I started with Gemini 2.0 Flash through the Google AI Studio.  
 
 **Prompts Tested:** \
@@ -25,7 +25,7 @@ This final prompt returned two sections: \
 
 I then tested 50 videos from the Ellen set to assess how the model would handle some of the more unique gestures in the set, including iconic gestures indicating path-source metaphors, thumbs up/down, PUOH gestures, and beats/baton.  Gemini was able to handle 5 videos with the same prompt before an internal error occurred, so I tested the 50 videos in 5-video batches and recorded the output in an Xcel document with each part of the response marked “valid” or “invalid”.  Since there’s no way for me to tell what sources Gemini is pulling it’s annotation terminology from, it’s annotations are sometimes different from the terminology the 30_Videos dataset is based on.  As such, some “valid” results did not match my original annotations but are still linguistically correct.  Gesture is fluid and how research discusses it is also somewhat varied.  
 
-**Results**
+**Results** \
 Gemini 2.0 Flash was 97% successful at recognizing and describing the actor’s motion in the video and around 60% accurate at categorizing/describing the co-speech gesture present in the video. 
 
 **Some interesting notes** 
