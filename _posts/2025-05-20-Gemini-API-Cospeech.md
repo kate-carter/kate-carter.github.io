@@ -127,7 +127,7 @@ While the average processing time was 7.9s, this includes two outliers at 26.3s 
 Gemini 2.0 Flash 001 has shown significant movement analysis capabilities (88% accuracy) and promising gesture recognition (83.8% validity, 42.4% correct match).  Due to its high error rate for gesture classification and usage of undesirable classification labels such as Illustrator, further work is required before it can be incorporated into unsupervised dataset pre-processing.  In its current state, it may be useful to generate movement descriptions that can be used to interpret gestures and recognize whether a gesture is present, which are both useful to researchers out of the box.  Further testing with prompt variation and context is required to determine whether it can annotate gestures linguistically fully unsupervised with the correct parameters.
 
 #### Example Output: 
-**Video:** 11-11-1_shrug.mp4 (Duration: 2.8 seconds) 
+**Video:** 11-11-1_shrug.mp4 (Duration: 2.8 seconds) \
 **Analysis:** \
 **Action Performed:** \
 Here's a breakdown of the co-speech gesture in the clip: \
@@ -144,7 +144,7 @@ Processing Time: \
 Total time: 6.9 seconds
 
 #### Acknowledgements:
-Thank you to Peter Uhrig of the Max Planck Institute of Psycholinguistics for creating this dataset and letting me use it. \
+Thank you to Dr. Peter Uhrig of the Max Planck Institute of Psycholinguistics for creating this dataset and letting me use it. \
 To Google AI for making Gemini free to use for researchers. \
 And to the Cursor team for making my life a lot easier.
 
