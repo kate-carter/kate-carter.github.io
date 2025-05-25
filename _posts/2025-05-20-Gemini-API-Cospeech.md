@@ -11,7 +11,7 @@ Original video: ```11-11.mp4``` \
 Cropped video: ```11-11-1_shrug.mp4``` 
 
 ### Manual Testing (Gemini 2.0 Flash)
-**Methods** \
+#### Methods
 To test Gemini’s capacity for labeling co-speech gesture on a small scale and refine my prompt before doing testing at scale, I started with Gemini 2.0 Flash through the Google AI Studio.  
 
 #### Prompts Tested:
@@ -36,7 +36,7 @@ Gemini 2.0 Flash was 97% successful at recognizing and describing the actor’s 
 ### API-Automated Testing (Gemini 2.0-001)
 After performing the manual testing to ensure that Gemini could produce useable data, I wrote a script that automates this testing using the same prompt. It takes input in the form of .mp4 videos containing 1 actor performing 1 gesture and returns a word document with the video name, actions performed, gesture classification, video duration, and the processing duration. The project is posted on [Github](https://github.com/kate-carter/Gemini_API_Co-Speech)
 
-#### Methods \
+#### Methods 
 When you’re using Google AI Studio, it auto-generates a script that when submitted to the API will simulate the chat, with context, that you’ve been having with the model.  I used this script as a template, generated from my conversation with Gemini 2.0-Flash to base my own script off. This ensured that I would include all the bare necessities such as calling the API keys and using absolute file paths for the videos. I threw this in Cursor (an AI-assisted code editor) and built it out until it could process the videos and return valid responses, first in the command line and then saved in .docx format.  The reason for using a .docx output instead of directly into a spreadsheet is that Gemini’s output for each section was around 10-30 words.  For initial testing, I wanted to be able to manually assess the accuracy of the visual analysis, gesture category validity, and any subcategories it identified.  
 
 Because I was writing and testing the script at the same time as testing the outputs, coherency trials were conducted before the main run of 99 videos was completed.  These coherency trials consisted of a run of the first 5 videos of the set until the script returned a correctly formatted result and the model output a coherent response.  For the purposes of this explanation, coherent can be defined as a response that possesses all desired response sections, each containing a response of reasonable length.  Both the prompt and the script were adjusted until this was achieved.  Valid refers to a response that has returned a movement or gesture analysis that is technically correct.  Correct refers to a response that matched the manual categorization I gave the gesture when doing my original annotations.  A total of 6 coherency trials were conducted before a full test run was performed.  The reason for the shorter coherency trials is twofold: 5 outputs is a manageable amount for me to verify, and Google API’s free tier sets a limit of requests one can make of each model each day.  The limits for gemini-2.0-flash-001 are high enough that this type of testing is not prone to reaching them, but some of the other models tested have more restrictive limits, and keeping the protocol consistent is important.  
@@ -67,6 +67,7 @@ Each of these 8 observations was manually assessed and recorded to create an .xc
 
 
 #### API Results
+
 Gemini 2.0 flash 001 was 88% successful at returning valid movement analysis and 83.8% successful returning a valid gesture categorization.  \
 **Validity of Response by Manual Category** overall 83.8% \
 Beat/deictic 100% of 1 \
@@ -107,13 +108,13 @@ While the average processing time was 7.9s, this includes two outliers at 26.3s 
 
 #### Conclusion
 
-Gemini 2.0 Flash 001 has shown significant movement analysis capabilities (88% accuracy) and promising gesture recognition (83.8% validity, 42.4% correct match).  Due to its high error rate for gesture classification and usage of undesirable classification labels such as Illustrator, further work is required before it can be incorporated into unsupervised dataset pre-processing.  In its current state, it may be useful to generate movement descriptions that can be used to interpret gestures and recognize whether a gesture is present, which are both useful to researchers out of the box.  Further testing with prompt variation and context is required to determine whether it can be used to annotate gestures linguistically fully unsupervised with the correct parameters.
+Gemini 2.0 Flash 001 has shown significant movement analysis capabilities (88% accuracy) and promising gesture recognition (83.8% validity, 42.4% correct match).  Due to its high error rate for gesture classification and usage of undesirable classification labels such as Illustrator, further work is required before it can be incorporated into unsupervised dataset pre-processing.  In its current state, it may be useful to generate movement descriptions that can be used to interpret gestures and recognize whether a gesture is present, which are both useful to researchers out of the box.  Further testing with prompt variation and context is required to determine whether it can annotate gestures linguistically fully unsupervised with the correct parameters.
 
-### Example Output: 
-#### Video: 11-11-1_shrug.mp4 (Duration: 2.8 seconds)
-**Analysis: ** \
+#### Example Output: 
+**Video:** 11-11-1_shrug.mp4 (Duration: 2.8 seconds) 
+**Analysis:** \
 **Action Performed:** \
-Here's a breakdown of the co-speech gesture in the clip: 
+Here's a breakdown of the co-speech gesture in the clip: \
 **Action:** The person in the clip extends both of their arms outwards with their palms facing upwards. 
 
 **Co-Speech Gesture Category:** \
@@ -126,14 +127,12 @@ Here's a breakdown of the co-speech gesture in the clip:
 Processing Time: \
 Total time: 6.9 seconds
 
-I’m currently assessing the results of this trial as I have to go through and manually determine the validity of all 101 responses (5/22/2025) Results will be posted soon.
-
-**Acknowledgements:** \
+#### Acknowledgements:
 Thank you to Peter Uhrig of the Max Planck Institute of Psycholinguistics for creating this dataset and letting me use it. \
 To Google AI for making Gemini free to use for researchers. \
 And to the Cursor team for making my life a lot easier.
 
-**References:** \
+#### References:
 [Medium Article](https://paulekman.medium.com/nonverbal-communication-and-deception-a7708a670ad8) on Dr. Paul Ekman's Gesture Classification
 
 Bressen, Jana. (2016). [Overview of Notation Conventions For Notation of Form In Gestures](http://www.janabressem.de/wp-content/uploads/2016/10/Bressem_notational-system-overview_final.pdf). Retrieved November 4, 2024.
