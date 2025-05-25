@@ -98,7 +98,20 @@ Total input: 4.38 minutes \
 Total processing time: 13.1 minutes \
 Average processing time per video: 7.96s
 
-The data visualization for these results can be accessed [here](https://github.com/kate-carter/kate-carter.github.io/blob/main/_posts/Gemini_2.0_No_Context_Plots.pdf)
+**Manual Data Validation Format**
+![First 5 entries of the data validation Xcel document](/assets/images/sampledata_gemini2.0NC.png)
+Table 1: first 5 observations of 11 datapoints (adapted from the Xcel file).
+
+![Category validity and correctness plots](/assets/images/g2.0nc_plots1.png)
+**Figure 1 (Left):** Percentage of Cases where the manually annotated category matches the category that Gemini assigned.  **Figure 2 (Right):** Visual representation of the ratio of valid/invalid categorizations Gemini made, organized by manual category.
+
+![Video duration over time plots, validity](/assets/images/g2.0nc_scatter1.png)
+**Figure 3 (Left):** Processing time over video duration.  Videos that Gemini returned valid gesture categories for are represented by green points, videos that Gemini returned invalid gesture categories for are represented by red points.   **Figure 4 (Right):** Processing time over video duration.  Videos that Gemini returned valid gesture subcategories for (E.g. correct identification of the subject of an iconic gesture) are represented with green points.  Videos that Gemini returned invalid subcategories for are represented by red points.  Videos that Gemini returned no subcategory for are represented by grey points.
+
+![Video duration over time plots, gesture categories](/assets/images/g2.0nc_scattercat.png)
+
+
+If the images are not loading in your browser, the data visualization for these results can be accessed [here](https://github.com/kate-carter/kate-carter.github.io/blob/main/_posts/Gemini_2.0_No_Context_Plots.pdf)
 
 #### Discussion
 
