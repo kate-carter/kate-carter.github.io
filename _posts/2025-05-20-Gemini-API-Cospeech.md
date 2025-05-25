@@ -109,6 +109,7 @@ Table 1: first 5 observations of 11 datapoints (adapted from the Xcel file).
 **Figure 3 (Left):** Processing time over video duration.  Videos that Gemini returned valid gesture categories for are represented by green points, videos that Gemini returned invalid gesture categories for are represented by red points.   **Figure 4 (Right):** Processing time over video duration.  Videos that Gemini returned valid gesture subcategories for (E.g. correct identification of the subject of an iconic gesture) are represented with green points.  Videos that Gemini returned invalid subcategories for are represented by red points.  Videos that Gemini returned no subcategory for are represented by grey points.
 
 ![Video duration over time plots, gesture categories](/assets/images/g2.0nc_scattercat.png)
+**Figure 5 (Left):** Processing time over video duration, with each manual gesture category labeled with a unique color.  **Figure 6 (Right):** Process time over video duration, with each Gemini-assigned category labeled with a unique color.
 
 
 If the images are not loading in your browser, the data visualization for these results can be accessed [here](https://github.com/kate-carter/kate-carter.github.io/blob/main/_posts/Gemini_2.0_No_Context_Plots.pdf)
