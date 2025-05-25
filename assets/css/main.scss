@@ -1,0 +1,85 @@
+@import "minima";
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --code-bg: #2d2d2d;
+    }
+
+    body {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    a {
+        color: var(--link-color) !important;
+    }
+
+    a:hover {
+        color: #79b8ff !important;
+    }
+
+    .site-header {
+        border-top: 5px solid var(--border-color) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    .site-title, .site-title:visited {
+        color: var(--text-color) !important;
+    }
+
+    .site-nav .page-link {
+        color: var(--text-color) !important;
+    }
+
+    .post-content {
+        color: var(--text-color) !important;
+    }
+
+    .post-list-heading {
+        color: var(--text-color) !important;
+    }
+
+    .post-meta {
+        color: #888 !important;
+    }
+
+    .post-link {
+        color: var(--link-color) !important;
+    }
+
+    .post-link:hover {
+        color: #79b8ff !important;
+    }
+
+    code {
+        background-color: var(--code-bg) !important;
+        color: #e0e0e0 !important;
+    }
+
+    pre {
+        background-color: var(--code-bg) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+
+    blockquote {
+        border-left: 4px solid var(--border-color) !important;
+        color: #888 !important;
+    }
+
+    table {
+        border: 1px solid var(--border-color) !important;
+    }
+
+    th, td {
+        border: 1px solid var(--border-color) !important;
+    }
+
+    tr:nth-child(even) {
+        background-color: #2a2a2a !important;
+    }
+} 
