@@ -1,0 +1,83 @@
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --code-bg: #2d2d2d;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    a {
+        color: var(--link-color);
+    }
+
+    a:hover {
+        color: #79b8ff;
+    }
+
+    .site-header {
+        border-top: 5px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .site-title, .site-title:visited {
+        color: var(--text-color);
+    }
+
+    .site-nav .page-link {
+        color: var(--text-color);
+    }
+
+    .post-content {
+        color: var(--text-color);
+    }
+
+    .post-list-heading {
+        color: var(--text-color);
+    }
+
+    .post-meta {
+        color: #888;
+    }
+
+    .post-link {
+        color: var(--link-color);
+    }
+
+    .post-link:hover {
+        color: #79b8ff;
+    }
+
+    code {
+        background-color: var(--code-bg);
+        color: #e0e0e0;
+    }
+
+    pre {
+        background-color: var(--code-bg);
+        border: 1px solid var(--border-color);
+    }
+
+    blockquote {
+        border-left: 4px solid var(--border-color);
+        color: #888;
+    }
+
+    table {
+        border: 1px solid var(--border-color);
+    }
+
+    th, td {
+        border: 1px solid var(--border-color);
+    }
+
+    tr:nth-child(even) {
+        background-color: #2a2a2a;
+    }
+} 
