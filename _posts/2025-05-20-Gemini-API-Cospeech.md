@@ -98,6 +98,8 @@ Total input: 4.38 minutes \
 Total processing time: 13.1 minutes \
 Average processing time per video: 7.96s
 
+The data visualization for these results can be accessed [here](https://github.com/kate-carter/kate-carter.github.io/blob/main/_posts/Gemini_2.0_No_Context_Plots.pdf)
+
 #### Discussion
 
 The reason that the percentage for “validity” is so much higher than “correctness” is because there is no context for the model in these trials.  The original annotations were specifically based on the work of Janna Bressen, Kendon (1980) and McNeill (1992).  There’s no way to tell exactly what Gemini was trained on in the realm of co-speech gesture. It classified many beat, iconic, and metaphoric gestures as “Illustrators”, a term popularized by Dr. Paul Ekman for usage in psychological study.  Unfortunately, what Dr. Ekman cared about is vastly different than what is salient for co-speech gesture analysis, so things classified primarily as “Illustrators” and then sub-categorized as something useful is not desirable.  Further trials with context (likely a PDF of linguistic co-speech gesture taxonomy) will be conducted in future work.
